@@ -2,7 +2,7 @@
 import numpy as np
 from plotData import plotData
 from computeCost import computeCost
-from gradientDecent import gradientDescent
+from gradientDescent import gradientDescent
 # In[]
 X=[]
 Y=[]
