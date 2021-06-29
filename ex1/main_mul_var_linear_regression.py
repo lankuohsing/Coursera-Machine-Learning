@@ -4,7 +4,9 @@ Created on Wed Mar 10 22:48:04 2021
 
 @author: lankuohsing
 """
-
+"""
+多变量线性回归
+"""
 # In[]
 import numpy as np
 from featureNormalize import featureNormalize
