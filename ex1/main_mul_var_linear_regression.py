@@ -12,6 +12,7 @@ import numpy as np
 from featureNormalize import featureNormalize
 from computeCostMulti import computeCostMulti
 from gradientDescentMulti import gradientDescentMulti
+from normalEqn import normalEqn
 import matplotlib.pyplot as plt
 # In[]
 X=[]
@@ -41,3 +42,10 @@ J=computeCostMulti(X_norm, Y, theta)
 theta,J_history = gradientDescentMulti(X_norm, Y, theta, alpha, num_iters)
 
 # In[]
+X=np.array(X)
+Y=np.array(Y).reshape(len(Y),1)
+m=X.shape[0]
+X=np.concatenate((np.ones((m,1)),X),axis=1)
+print("X=[",X[0:10,:],"]\n,Y=[",Y[0:10,:],"]")
+theta=normalEqn(X,Y)
+print("Theta computed from normal equation:",theta[0],theta[1],theta[2])
