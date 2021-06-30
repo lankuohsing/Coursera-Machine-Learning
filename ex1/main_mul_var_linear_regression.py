@@ -40,6 +40,7 @@ alpha=0.1
 # In[]
 J=computeCostMulti(X_norm, Y, theta)
 theta,J_history = gradientDescentMulti(X_norm, Y, theta, alpha, num_iters)
+print("Theta computed from gradient descent:",theta[0],theta[1],theta[2])
 
 # In[]
 X=np.array(X)
